@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f1e9">
+  <meta name="description" content="FURNIX — премиальный мебельный магазин">
+  <title>FURNIX — Furniture for living</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="announcement" data-i18n="announcement">
+  Бесплатная доставка от 5 000 000 сум · 14 дней на возврат
+</div>
+
+<header class="header" id="top">
+  <a class="logo" href="#top">FURN<span>I</span>X<span class="logo-dot">.</span></a>
+
+  <nav class="desktop-nav">
+    <a href="#catalog" data-i18n="navCatalog">Каталог</a>
+    <a href="#collections" data-i18n="navCollections">Коллекции</a>
+    <a href="#about" data-i18n="navAbout">О бренде</a>
+    <a href="#contacts" data-i18n="navContacts">Контакты</a>
+  </nav>
+
+  <div class="header-actions">
+    <label class="search-box">
+      <span>⌕</span>
+      <input id="searchInput" type="search"
+        placeholder="Поиск мебели..."
+        data-i18n-placeholder="searchPlaceholder">
+    </label>
+
+    <select id="languageSelect" class="language-select">
+      <option value="ru">RU</option>
+      <option value="uz">UZ</option>
+      <option value="en">EN</option>
+    </select>
+
+    <button class="icon-btn" id="themeToggle">☾</button>
+
+    <button class="icon-btn" id="cartOpen">
+      ♧ <span class="cart-count" id="cartCount">0</span>
+    </button>
+
+    <button class="menu-btn" id="menuToggle">☰</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow reveal" data-i18n="heroEyebrow">
+        ИСКУССТВО ЖИТЬ КРАСИВО
+      </p>
+
+      <h1 class="reveal">
+        <span data-i18n="heroTitleA">Пространство,</span><br>
+        <em data-i18n="heroTitleB">в котором</em><br>
+        <span data-i18n="heroTitleC">хочется жить.</span>
+      </h1>
+
+      <p class="hero-description reveal" data-i18n="heroText">
+        Продуманная мебель, натуральные фактуры и детали,
+        которые превращают дом в особенное место.
+      </p>
+
+      <div class="hero-buttons reveal">
+        <a class="btn btn-dark" href="#catalog" data-i18n="heroButton">
+          Смотреть коллекцию ↗
+        </a>
+
+        <a class="text-link" href="#about" data-i18n="learnMore">
+          Узнать о FURNIX
+        </a>
+      </div>
+
+      <div class="hero-note reveal">
+        <span class="note-line"></span>
+        <span data-i18n="heroNote">
+          Дизайн с характером. Комфорт на каждый день.
+        </span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-image"></div>
+
+      <div class="hero-stamp">
+        <span>F</span>
+        <small>FURNIX<br>COLLECTION<br>2026</small>
+      </div>
+
+      <div class="image-caption">
+        <span>01 / 04</span>
+        <span data-i18n="heroCaption">THE ART OF SLOW LIVING</span>
+      </div>
+    </div>
+
+    <div class="hero-side-label">
+      FURNITURE · INTERIOR · LIVING
+    </div>
+  </section>
+
+  <!-- ADVANTAGES -->
+  <section class="trust-strip">
+    <div><strong>01</strong><span data-i18n="trustOne">Продуманный дизайн</span></div>
+    <div><strong>02</strong><span data-i18n="trustTwo">Качество материалов</span></div>
+    <div><strong>03</strong><span data-i18n="trustThree">Доставка по Узбекистану</span></div>
+    <div><strong>04</strong><span data-i18n="trustFour">Забота после покупки</span></div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="section categories-section" id="collections">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow" data-i18n="categoryEyebrow">НАЙДИТЕ СВОЙ СТИЛЬ</p>
+        <h2 data-i18n="categoryTitle">Комнаты с характером</h2>
+      </div>
+
+      <a class="text-link" href="#catalog" data-i18n="allCategories">
+        Все категории ↗
+      </a>
+    </div>
+
+    <div class="category-grid">
+
+      <button class="category-card category-large" data-category="beds">
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1100&q=85" alt="Кровать">
+        <span class="category-overlay">
+          <small>01 / BEDROOM</small>
+          <b data-i18n="catBeds">Кровати и спальни</b>
+          <i>↗</i>
+        </span>
+      </button>
+
+      <button class="category-card" data-category="sofas">
+        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=85" alt="Диван">
+        <span class="category-overlay">
+          <small>02 / LIVING</small>
+          <b data-i18n="catSofas">Диваны и уголки</b>
+          <i>↗</i>
+        </span>
+      </button>
+
+      <button class="category-card" data-category="storage">
+        <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=900&q=85" alt="Шкаф">
+        <span class="category-overlay">
+          <small>03 / STORAGE</small>
+          <b data-i18n="catStorage">Шкафы и комоды</b>
+          <i>↗</i>
+        </span>
+      </button>
+
+      <button class="category-card" data-category="tables">
+        <img src="https://images.unsplash.com/photo-1499933374294-4584851497cc?auto=format&fit=crop&w=900&q=85" alt="Стол">
+        <span class="category-overlay">
+          <small>04 / DINING</small>
+          <b data-i18n="catTables">Столы и стулья</b>
+          <i>↗</i>
+        </span>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- CATALOG -->
+  <section class="section products-section" id="catalog">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow" data-i18n="catalogEyebrow">ИЗБРАННОЕ FURNIX</p>
+        <h2 data-i18n="catalogTitle">Предметы для жизни</h2>
+      </div>
+
+      <div class="carousel-controls">
+        <button id="prevProducts">←</button>
+        <button id="nextProducts">→</button>
+      </div>
+    </div>
+
+    <div class="catalog-toolbar">
+      <div class="filter-pills" id="filterPills">
+        <button class="filter-pill active" data-filter="all" data-i18n="filterAll">Все</button>
+        <button class="filter-pill" data-filter="beds" data-i18n="filterBeds">Кровати</button>
+        <button class="filter-pill" data-filter="sofas" data-i18n="filterSofas">Диваны</button>
+        <button class="filter-pill" data-filter="storage" data-i18n="filterStorage">Шкафы</button>
+        <button class="filter-pill" data-filter="tables" data-i18n="filterTables">Столы</button>
+        <button class="filter-pill" data-filter="other" data-i18n="filterOther">Другое</button>
+      </div>
+
+      <select id="sortSelect" class="sort-select">
+        <option value="featured" data-i18n="sortFeatured">Сначала популярные</option>
+        <option value="low" data-i18n="sortLow">Сначала дешевле</option>
+        <option value="high" data-i18n="sortHigh">Сначала дороже</option>
+      </select>
+    </div>
+
+    <div class="product-track" id="productGrid"></div>
+    <p class="empty-state hidden" id="emptyState" data-i18n="emptyProducts">
+      Ничего не найдено.
+    </p>
+  </section>
+
+  <!-- EDITORIAL -->
+  <section class="editorial">
+    <div class="editorial-image"></div>
+
+    <div class="editorial-copy">
+      <p class="eyebrow" data-i18n="editorialEyebrow">МЕНЬШЕ, НО ЛУЧШЕ</p>
+
+      <h2 data-i18n="editorialTitle">
+        Красота —<br><em>в простоте.</em>
+      </h2>
+
+      <p data-i18n="editorialText">
+        Мы верим, что мебель должна не просто заполнять пространство,
+        а помогать чувствовать себя дома.
+      </p>
+
+      <a href="#catalog" class="text-link" data-i18n="editorialLink">
+        Открыть каталог ↗
+      </a>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="section benefits-section" id="about">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow" data-i18n="benefitsEyebrow">ПОЧЕМУ FURNIX</p>
+        <h2 data-i18n="benefitsTitle">Покупка без лишних забот</h2>
+      </div>
+    </div>
+
+    <div class="benefit-grid">
+      <article class="benefit">
+        <span>✳</span>
+        <h3 data-i18n="benefitOneTitle">Подбор с заботой</h3>
+        <p data-i18n="benefitOneText">Поможем выбрать мебель под ваш интерьер.</p>
+      </article>
+
+      <article class="benefit">
+        <span>⌁</span>
+        <h3 data-i18n="benefitTwoTitle">Доставка и сборка</h3>
+        <p data-i18n="benefitTwoText">Согласуем удобное время доставки.</p>
+      </article>
+
+      <article class="benefit">
+        <span>◇</span>
+        <h3 data-i18n="benefitThreeTitle">Надёжные материалы</h3>
+        <p data-i18n="benefitThreeText">Внимание к качеству исполнения.</p>
+      </article>
+
+      <article class="benefit">
+        <span>♡</span>
+        <h3 data-i18n="benefitFourTitle">Поддержка рядом</h3>
+        <p data-i18n="benefitFourText">Остаёмся на связи после покупки.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="newsletter">
+    <div>
+      <p class="eyebrow" data-i18n="newsletterEyebrow">FURNIX JOURNAL</p>
+      <h2 data-i18n="newsletterTitle">Вдохновение для вашего дома.</h2>
+      <p data-i18n="newsletterText">Оставьте номер — мы свяжемся с вами.</p>
+    </div>
+
+    <form id="newsletterForm" class="newsletter-form">
+      <input type="tel" id="newsletterPhone" placeholder="+998 90 123 45 67" required>
+      <button class="btn btn-light" type="submit" data-i18n="subscribe">Оставить заявку ↗</button>
+      <small data-i18n="privacyNote">Вы соглашаетесь на обратный звонок.</small>
+    </form>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" id="contacts">
+  <div class="footer-main">
+
+    <div>
+      <a class="logo footer-logo" href="#top">FURN<span>I</span>X<span class="logo-dot">.</span></a>
+      <p data-i18n="footerText">Создаём пространство, в котором хочется быть.</p>
+    </div>
+
+    <div>
+      <h4 data-i18n="footerExplore">Исследуйте</h4>
+      <a href="#catalog" data-i18n="navCatalog">Каталог</a>
+      <a href="#collections" data-i18n="navCollections">Коллекции</a>
+      <a href="#about" data-i18n="navAbout">О бренде</a>
+    </div>
+
+    <div>
+      <h4 data-i18n="footerContact">Связаться</h4>
+      <a href="tel:+998901234567">+998 90 123 45 67</a>
+      <a href="https://t.me/" target="_blank">Telegram ↗</a>
+      <a href="https://instagram.com/" target="_blank">Instagram ↗</a>
+    </div>
+
+    <div>
+      <h4 data-i18n="footerVisit">Мы на карте</h4>
+      <p data-i18n="addressText">Ташкент, Узбекистан</p>
+      <a href="https://maps.google.com/?q=Tashkent" target="_blank" data-i18n="openMap">Открыть карту ↗</a>
+      <button class="admin-link" id="adminOpen">Вход для администратора</button>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 FURNIX. <span data-i18n="rights">Все права защищены.</span></span>
+    <span data-i18n="footerMade">Дизайн пространства начинается здесь.</span>
+  </div>
+</footer>
+
+<!-- CART -->
+<div class="overlay" id="overlay"></div>
+
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="drawer-head">
+    <div>
+      <p class="eyebrow">FURNIX</p>
+      <h2 data-i18n="cartTitle">Ваша корзина</h2>
+    </div>
+    <button class="close-btn" id="cartClose">×</button>
+  </div>
+
+  <div class="cart-items" id="cartItems"></div>
+
+  <div class="cart-bottom">
+    <div class="cart-total">
+      <span data-i18n="total">Итого</span>
+      <strong id="cartTotal">0 сум</strong>
+    </div>
+
+    <button class="btn btn-dark btn-full" id="checkoutOpen" data-i18n="checkout">
+      Оформить заказ ↗
+    </button>
+
+    <small data-i18n="checkoutDemo">
+      Демонстрационный режим.
+    </small>
+  </div>
+</aside>
+
+<!-- CHECKOUT -->
+<div class="modal" id="checkoutModal">
+  <div class="modal-card">
+    <button class="close-btn modal-close" data-close="checkoutModal">×</button>
+
+    <p class="eyebrow">FURNIX / ORDER</p>
+    <h2 id="checkoutTitle" data-i18n="checkoutTitle">Оформление заказа</h2>
+
+    <form id="checkoutForm" class="form-grid">
+      <label>
+        <span data-i18n="yourName">Ваше имя</span>
+        <input name="name" required minlength="2">
+      </label>
+
+      <label>
+        <span data-i18n="phone">Номер телефона</span>
+        <input name="phone" type="tel" required placeholder="+998 90 123 45 67">
+      </label>
+
+      <label class="full-field">
+        <span data-i18n="deliveryAddress">Адрес доставки</span>
+        <input name="address" required>
+      </label>
+
+      <label class="full-field">
+        <span data-i18n="orderComment">Комментарий</span>
+        <textarea name="comment" rows="3"></textarea>
+      </label>
+
+      <div class="full-field checkout-summary" id="checkoutSummary"></div>
+
+      <button class="btn btn-dark btn-full full-field" type="submit" data-i18n="sendOrder">
+        Отправить заявку ↗
+      </button>
+    </form>
+
+    <p class="form-note" data-i18n="realIntegrationsNote">
+      Для реальных SMS и оплаты потребуется сервер.
+    </p>
+  </div>
+</div>
+
+<!-- ADMIN -->
+<div class="modal" id="adminModal">
+  <div class="modal-card admin-card">
+    <button class="close-btn modal-close" data-close="adminModal">×</button>
+
+    <p class="eyebrow">FURNIX / CONTROL</p>
+    <h2>Admin panel</h2>
+
+    <div id="adminLoginView">
+      <p class="muted" data-i18n="adminDemoHint">
+        Демо-доступ. Перед публикацией настройте серверную авторизацию.
+      </p>
+
+      <label>
+        <span data-i18n="adminPassword">Пароль администратора</span>
+        <input type="password" id="adminPassword">
+      </label>
+
+      <button class="btn btn-dark btn-full" id="adminLogin" data-i18n="login">
+        Войти
+      </button>
+
+      <small class="form-note">Demo password: <b>furnix2026</b></small>
+    </div>
+
+    <div id="adminPanelView" class="hidden">
+      <div class="admin-stats" id="adminStats"></div>
+
+      <h3 data-i18n="adminOrders">Последние заявки</h3>
+      <div id="adminOrdersList" class="admin-orders"></div>
+
+      <h3 data-i18n="adminAddProduct">Добавить товар</h3>
+
+      <form id="addProductForm" class="form-grid">
+        <label>
+          <span data-i18n="productName">Название</span>
+          <input name="name" required>
+        </label>
+
+        <label>
+          <span data-i18n="productPrice">Цена (сум)</span>
+          <input name="price" type="number" min="1" required>
+        </label>
+
+        <label>
+          <span data-i18n="productCategory">Категория</span>
+          <select name="category">
+            <option value="beds">Кровати</option>
+            <option value="sofas">Диваны</option>
+            <option value="storage">Шкафы</option>
+            <option value="tables">Столы</option>
+            <option value="other">Другое</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Image URL</span>
+          <input name="image" type="url" placeholder="https://...">
+        </label>
+
+        <button class="btn btn-dark btn-full full-field" type="submit" data-i18n="addProduct">
+          Добавить товар
+        </button>
+      </form>
+
+      <button class="text-link logout-btn" id="adminLogout" data-i18n="logout">
+        Выйти из панели
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
